@@ -1,0 +1,433 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swag');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* body {
+    width: 100%;
+    background: #e5e8ed;
+    position: relative;
+    display: flex;
+} */
+
+.sidebar{
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    margin: 1rem;
+    height: 100vh;
+    /* width: 300px; */
+    /* background: #11101d; */
+}
+.sidebar .logo-details{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar .logo-details img{
+    font-size: 30px;
+    height: 40px;
+    min-width: 78px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    align-items: center;
+    line-height: 50px;
+}
+/* .logo2{
+    right: 0;
+} */
+.sidebar .logo-details 
+.sidebar .logo-details .logo_name{
+    font-size: 18px;
+    color: #000;
+    margin-left: 3px;
+}
+
+.sidebar .nav-links{
+    height: 100%;
+    padding-top: 30px;
+}
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+    color: #000;
+}
+.sidebar .nav-links li:hover{
+    background: rgb(197, 186, 186);
+}
+.sidebar .nav-links li .icon-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    /* color: #000; */
+}
+.sidebar .nav-links li i{
+    height: 50px;
+    /* min-width: 78px; */
+    /* align-items: center; */
+    line-height: 50px;
+    margin-right: 0.3rem;
+    font-size: 20px;
+    color: #282727;
+}
+.sidebar .nav-links li{
+    display: flex;
+} 
+.sidebar .nav-links li a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+.sidebar .nav-links li a .link_name{
+    font-size: 18px;
+    font-weight: 400;
+}
+.sidebar .nav-links li .sub-menu{
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: rgb(233, 227, 227);
+    /* display: none; */
+}
+.sidebar .nav-links li .sub-menu a{
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.3 ease;
+}
+.sidebar.close .nav-links li .sub-menu a:hover{
+    opacity: 1;
+}/*
+.sidebar.close .nav-links li .sub-menu{
+   position: absolute;
+   left: 100%;
+   top: -10px;
+   margin-top: 0;
+   padding: 10px 20px;
+   border-radius: 0 6px 6px 0;
+   transition: all 0.4s ease;
+   opacity: 0;
+   pointer-events: none;
+}
+.sidebar.close .nav-links li:hover .sub-menu{
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar .nav-links li .sub-menu .link_name{
+    display: none;
+}
+.sidebar.close .nav-links li .sub-menu .link_name{
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}*/
+
+.sidebar .profile-details{
+position: relative;
+display: flex;
+align-items: center;
+bottom: 0;
+margin-top: 405px;
+}
+.profile-details li {
+    display: flex;
+    justify-content: space-between;  
+margin: 0.3rem;
+}
+.profile-details li i{
+    color: black;
+    margin-right: 0.3rem;
+}
+.profile-details li a{
+    text-decoration: none;
+    color: black;
+}
+
+#toggle-sidebar {
+    display: none;
+}
+
+#toggle-sidebar:checked + .sidebar {
+    display: none;
+}
+
+#toggle-sidebar:checked + .sidebar + .body-section {
+    margin-left: 0;
+}
+
+.board {
+    /* width: calc(100% - 300px); */
+    /* margin-left: 300px; */
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.board table thead tr .row-section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.brand-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-info img {
+    width: 40px;
+    height: 40px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 5px;
+}
+
+.brand-info div {
+    display: flex;
+    align-items: center;
+}
+
+.brand-info div h2 {
+    margin: 0;
+}
+
+.member-info {
+    display: flex;
+    align-items: center;
+}
+
+.member-info img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+/*
+@media (max-width: 769px) {
+    #menu {
+        width: 270px;
+        position: fixed;
+        left: -270px;
+        transition: 0.3s ease;
+    }
+    #menu.active{
+        left: 0px;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    #interface {
+        width: 100%;
+        margin-left: 0px;
+        display: inline-block;
+        transition: 0.3s ease;
+    }
+    #menu.active~ #interface{
+        width: calc(100% - 270px);
+        margin-left: 270px;
+        transition: 0.3s ease;
+    }
+    #interface .navigation {
+        width: 100%;
+    }
+    .values {
+        padding: 30px 30px 0 30px;
+        justify-content: flex-start;
+    }
+    .values .val-box{
+        padding: 16px 20px;
+        margin: 10px 20px 10px 0;
+    }
+    .board {
+        width: 92%;
+        padding: 0;
+        overflow-x: auto;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+}
+/*
+@media (max-width: 477px){
+    #interface .navigation {
+        padding: 15px;
+    }
+    #interface .navigation .search input{
+        width: 150px;
+    }
+    .i-name{
+        padding: 30px 15px 0 15px;
+    }
+    .values{
+        padding: 15px 15px 0 15px;
+    }
+    .values .val-box{
+        width: 100%;
+        margin: 8px 0;
+    }
+    .board{
+        margin: 30px 15px 30px 15px;
+    }
+} */
+
+/* styles.css */
+.container {
+    display: flex;
+    /* border: 1px solid #ccc; */
+}
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    position: relative;
+    color: white;
+}
+.sidebar,
+.body-section{
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+.body-section {
+    flex: 1;
+    position: relative;
+    padding: 20px;
+    margin: 1rem;
+    height: 1300px;
+    /* margin-left: 170px; */
+    flex-direction: row;
+}
+
+/* Add your custom styling for sidebar and body here */
+
+.values{
+    display: flex;
+    justify-content: space-between;
+}
+.details-half{
+    display: flex;
+    flex-direction: row;
+}
+.details-half .dropdown, .dropdown1{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-right: 0.3rem;
+}
+.other-details-half{
+    display: flex;
+    flex-direction: row;
+}
+/* .brand-name{
+    display: flex;
+    justify-content: space-between;
+} */
+
+.brand-name h2{
+    font-size: 17px;
+}
+.social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    margin: 0.3rem;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 270px;
+    width: 500px;
+}
+
+.brand-description{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px;
+    text-overflow: ellipsis;
+}
+.brand-description-one{
+    /* width: 250px; */
+    overflow-x: auto;
+    white-space: nowrap;
+}
+/* .brand-description-one button{
+    
+}
+::-webkit-scrollbar{
+    
+} */
+.brand-mem{
+    display: flex;
+    align-items: center;
+    /* position: relative; */
+}
+
+.brand-mem img {
+    /* position: absolute; */
+    width: 30%; /* Adjust image size as needed */
+    border-radius: 50%; /* Rounded corners for images */
+    overflow: hidden; /* Hide overflowing parts of images */
+}
+.brand-mem img:nth-child(1) {
+    left: 0; /* Position first image at the beginning */
+}
+
+.brand-mem img:nth-child(2) {
+    left: 70%; /* Position second image at 70% */
+}
+
+/* Position subsequent images above the second image */
+.brand-mem img:nth-child(n+3) {
+    top: -30px; /* Adjust top position as needed */
+    left: 70%; /* Align subsequent images with the second image */
+}
+
+.brand-mem img:not(:last-child) {
+    margin-right: 5px; /* Add spacing between images */
+}
+
+.right-align{
+    text-align: right;
+    white-space: nowrap;
+    /* overflow: hidden; */
+}
+/* .right-align div i{
+    margin-right: 5px;
+} */
+.right-align div h2{
+    font-size: 15px;
+}
+
+.drop{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
